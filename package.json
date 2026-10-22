@@ -1,0 +1,55 @@
+{
+  "name": "ach-toolkit",
+  "version": "0.0.0",
+  "description": "Parse and validate NACHA ACH payment files.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [
+    "ach",
+    "nacha",
+    "payments",
+    "parser",
+    "fintech"
+  ],
+  "author": "Jed Stout <jedstout@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JedStout/ach-toolkit.git"
+  },
+  "homepage": "https://github.com/JedStout/ach-toolkit#readme",
+  "bugs": {
+    "url": "https://github.com/JedStout/ach-toolkit/issues"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.5",
+    "eslint": "^10.13.0",
+    "prettier": "^3.9.10",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^5.0.5"
+  }
+}
